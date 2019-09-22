@@ -1,10 +1,10 @@
 function printLabel(labeledObj) {
     console.log(labeledObj.label);
 }
-var myObj = { size: 10, label: "Size 10 Object" };
+var myObj = { size: 10, label: 'Size 10 Object' };
 printLabel(myObj);
 function createSquare(config) {
-    var newSquare = { color: "white", area: 100 };
+    var newSquare = { color: 'white', area: 100 };
     if (config.color) {
         newSquare.color = config.color;
     }
@@ -13,5 +13,9 @@ function createSquare(config) {
     }
     return newSquare;
 }
-var mySquare = createSquare({ color: "black" });
+var mySquare = createSquare({ color: 'black' });
 console.log(mySquare);
+var locObj = {
+    x: 4.182,
+    y: 5.908
+};
