@@ -11,34 +11,24 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
-var Greeter = /** @class */ (function () {
-    function Greeter(message) {
-        this.greeting = message;
+var Animal = /** @class */ (function () {
+    function Animal(name) {
+        this.animalName = name;
     }
-    Greeter.prototype.greet = function () {
-        return "Hello, " + this.greeting;
+    Animal.prototype.walk = function (distance) {
+        console.log(this.animalName + " walked " + distance + " in meters!");
     };
-    return Greeter;
+    return Animal;
 }());
-var greeter = new Greeter("world");
-var Car = /** @class */ (function () {
-    function Car() {
+var Dog = /** @class */ (function (_super) {
+    __extends(Dog, _super);
+    function Dog(name) {
+        return _super.call(this, name) || this;
     }
-    Car.prototype.drive = function (distance) {
-        console.log("Car drove " + distance + " miles");
+    Dog.prototype.talk = function (message) {
+        console.log(this.animalName + " says " + message + "!");
     };
-    return Car;
-}());
-var Nissan = /** @class */ (function (_super) {
-    __extends(Nissan, _super);
-    function Nissan() {
-        return _super !== null && _super.apply(this, arguments) || this;
-    }
-    Nissan.prototype.boost = function () {
-        console.log("Your car just boosted");
-    };
-    return Nissan;
-}(Car));
-var r34 = new Nissan();
-r34.drive(40);
-r34.boost();
+    return Dog;
+}(Animal));
+var doggo = new Dog('Porter');
+doggo.talk('WOOF!');

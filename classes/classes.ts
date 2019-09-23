@@ -1,28 +1,21 @@
-class Greeter {
-    greeting: string;
-    constructor(message: string) {
-        this.greeting = message;
-    }
-    greet() {
-        return "Hello, " + this.greeting;
-    }
+class Animal {
+  animalName: string;
+  constructor(name: string) {
+    this.animalName = name;
+  }
+  walk(distance: number) {
+    console.log(`${this.animalName} walked ${distance} in meters!`);
+  }
 }
 
-let greeter = new Greeter("world")
-
-
-class Car {
-    drive(distance: number) {
-        console.log(`Car drove ${distance} miles`);
-    }
+class Dog extends Animal {
+  constructor(name: string) {
+    super(name);
+  }
+  talk(message: string) {
+    console.log(`${this.animalName} says ${message}!`);
+  }
 }
 
-class Nissan extends Car {
-    boost() {
-        console.log("Your car just boosted")
-    }
-}
-
-const r34 = new Nissan();
-r34.drive(40)
-r34.boost()
+const doggo = new Dog('Porter');
+doggo.talk('WOOF!');
