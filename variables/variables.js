@@ -1,10 +1,11 @@
+"use strict";
 var isDone = false;
-var myString = "Hi this is my string";
+var myString = 'Hi this is my string';
 var myNumber = 73;
 var myArray = [1, 2, 3];
 var myArray2 = [4, 5, 6];
 var myTuple;
-myTuple = [43, "yo"];
+myTuple = [43, 'yo'];
 var Color;
 (function (Color) {
     Color[Color["Red"] = 0] = "Red";
@@ -14,3 +15,6 @@ var Color;
 var c = Color.Green;
 var colorName = Color[2];
 console.log(colorName);
+var notSure = 4;
+notSure = 'could b a string';
+notSure = 32;
